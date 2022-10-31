@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS-TECH-BLOG</title>
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+      <nav class="navbar">
+
+          <ul>
+             <li></li> 
+          </ul>
+      </nav>
+    <div class="flex-column justify-space-around">
+
+      <header class="display-flex justify-space-between align-center">
+        <h1>
+          <span role="img" aria-label="post"></span>
+          <a href="/">Post your thoughts</a>
+        </h1>
+        <nav>
+          {{#if logged_in}}
+          <a href="/dashboard">Dashboard</a>
+          <button class="no-button">Log Out</button>
+          {{else}}
+          <a href="/login"></a>
+          {{if}}
+        </nav>
+      </header>
+      <main class="container container-fluid mt-5">
+        {{{body}}}
+
+      </main>
+    <footer>
+        &copy; CMS-Tech-Blog
+    </footer>
+    </div>
+{{#if logged_in}}
+<script src="../../public/js/logout.js"></script>
+  </body>
+</html>
